@@ -10,7 +10,7 @@ Sample code to test Service Bus Node.js SDK in what appears to be a bug when int
 
 ```s
 npm i
-npm debug
+npm start
 ```
 
 3. Immediately disconnect from Wi-Fi and the program will exit in about 01:20 minutes.
