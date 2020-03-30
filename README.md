@@ -4,13 +4,13 @@ Sample code to test Service Bus Node.js SDK in what appears to be a bug when int
 
 ## Simulation
 
-1. Create `.env` from [template.env](template.env)
+1. Create `.env` from [template.env](template.env) filling up the required parameters.
 
-2. Run it
+2. Run it:
 
 ```s
 npm i
 npm debug
 ```
 
-3. Now disconnect from Wi-Fi, the program will exit in about 01:20 minutes.
+3. Immediately disconnect from Wi-Fi and the program will exit in about 01:20 minutes.
