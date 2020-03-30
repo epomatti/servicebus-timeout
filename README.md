@@ -13,4 +13,4 @@ npm i
 npm start
 ```
 
-3. Immediately disconnect from Wi-Fi and the program will exit in about 01:20 minutes.
+3. Immediately disconnect from the internet and the program will exit in about 01:20 minutes.
