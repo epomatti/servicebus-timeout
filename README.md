@@ -8,7 +8,7 @@ Sample code to test Service Bus Node.js SDK in what appears to be a bug when int
 
 2. Run it:
 
-```s
+```sh
 npm i
 npm start
 ```
