@@ -15,19 +15,25 @@ az servicebus namespace authorization-rule keys list \
 
 ### Simulation
 
-1. Create `.env` from [template.env](template.env) filling up the required parameters.
+Create `.env` and fill with environment values:
 
-2. Run it:
+```sh
+cp config/template.env .env
+```
+
+Run it:
 
 ```sh
 npm i
 npm start
 ```
 
-3. Immediately disconnect from the internet and the program will exit in about 01:20 minutes.
+Immediately disconnect from the internet. Wait at least 1:20 minutes.
 
-4. Add messages to confirm it continues to operate:
+Reconnect to the internet and add messages to confirm it continues to operate:
 
 ```sh
 node src/enqueue.js
 ```
+
+All messages should be consumed.
