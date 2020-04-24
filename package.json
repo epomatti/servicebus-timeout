@@ -2,6 +2,7 @@
   "name": "servicebus-timeout",
   "version": "1.0.0",
   "description": "",
+  "main": "src/dequeue.js",
   "scripts": {
     "start": "node src/dequeue.js",
     "debug": "NODE_ENV=dev DEBUG=rhea:events,*error,azure:service-bus:receiverbatching node src/dequeue.js",
