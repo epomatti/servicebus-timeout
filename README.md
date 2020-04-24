@@ -26,6 +26,8 @@ Run it:
 ```sh
 npm i
 npm start
+
+# "npm run debug" for dumps
 ```
 
 Immediately disconnect from the internet. Wait at least 1:20 minutes.

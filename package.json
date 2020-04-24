@@ -1,14 +1,13 @@
 {
-  "name": "demo-servicebus",
+  "name": "servicebus-timeout",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "node src/dequeue.js",
-    "startDebug": "NODE_ENV=dev DEBUG=rhea:events,*error,azure:service-bus:receiverbatching node src/dequeue.js",
+    "debug": "NODE_ENV=dev DEBUG=rhea:events,*error,azure:service-bus:receiverbatching node src/dequeue.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Evandro Pomatti",
   "license": "ISC",
   "dependencies": {
     "@azure/service-bus": "latest",
