@@ -19,6 +19,7 @@ async function main() {
     } catch (e) {
       console.error(e);
     } finally {
+      // TODO would make sense to to delay the next execution, instead of imediate loop
       console.log("Program ended: " + new Date());
       await this.sbClient.close();
     }

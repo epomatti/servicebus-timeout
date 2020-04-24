@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=dev DEBUG=rhea:events,*error,azure:service-bus:receiverbatching node src/dequeue.js",
+    "start": "node src/dequeue.js",
+    "startDebug": "NODE_ENV=dev DEBUG=rhea:events,*error,azure:service-bus:receiverbatching node src/dequeue.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
