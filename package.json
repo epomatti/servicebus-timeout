@@ -2,10 +2,14 @@
   "name": "servicebus-timeout",
   "version": "1.0.0",
   "description": "",
+  "repository": {
+    "url": "https://github.com/evandropomatti/servicebus-timeout"
+  },
   "main": "src/dequeue.js",
   "scripts": {
     "start": "node src/dequeue.js",
-    "debug": "NODE_ENV=dev DEBUG=rhea:events,*error,azure:service-bus:receiverbatching node src/dequeue.js",
+    "debug-linux": "NODE_ENV=dev DEBUG=rhea:events,*error,azure:service-bus:receiverbatching node src/dequeue.js",
+    "debug-windows": "set NODE_ENV=dev & set DEBUG=rhea:events,*error,azure:service-bus:receiverbatching & node src/dequeue.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Evandro Pomatti",
