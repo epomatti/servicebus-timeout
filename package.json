@@ -8,8 +8,7 @@
   "main": "src/dequeue.js",
   "scripts": {
     "start": "node src/dequeue.js",
-    "debug-linux": "NODE_ENV=dev DEBUG=rhea:events,*error,azure:service-bus:receiverbatching node src/dequeue.js",
-    "debug-windows": "set NODE_ENV=dev & set DEBUG=rhea:events,*error,azure:service-bus:receiverbatching & node src/dequeue.js",
+    "debug": "cross-env NODE_ENV=dev DEBUG=rhea:events,*error,azure:service-bus:receiverbatching node src/dequeue.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Evandro Pomatti",
@@ -17,5 +16,8 @@
   "dependencies": {
     "@azure/service-bus": "latest",
     "dotenv": "latest"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2"
   }
 }
