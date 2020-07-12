@@ -8,14 +8,13 @@ const queueName = process.env.QUEUE_NAME || "<queue name>";
 async function main() {
   while (true) {
     try {
-      this.sbClient = ServiceBusClient.createFromConnectionString(connectionString);
-      this.queueClient = this.sbClient.createQueueClient(queueName);
-      this.receiver = this.queueClient.createReceiver(ReceiveMode.receiveAndDelete);
+      this.sbClient = new ServiceBusClient(connectionString);
+      this.queueReceiver = this.sbClient.createReceiver(queueName, "receiveAndDelete");
       // Clients locks here and keep waiting for messages
       console.log("Waiting for messages: " + new Date());
-      const messages = await this.receiver.receiveMessages(10);
+      const messages = await this.queueReceiver.receiveMessages(10);
       messages.forEach(({ body }) => console.log(body));
-      await this.queueClient.close();
+      await this.queueReceiver.close();
     } catch (e) {
       console.error(e);
     } finally {

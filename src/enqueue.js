@@ -51,11 +51,10 @@ const listOfScientists = [
 ];
 
 async function main() {
-  const sbClient = ServiceBusClient.createFromConnectionString(connectionString);
+  this.sbClient = new ServiceBusClient(connectionString);
 
   // If sending to a Topic, use `createTopicClient` instead of `createQueueClient`
-  const queueClient = sbClient.createQueueClient(queueName);
-  const sender = queueClient.createSender();
+  const sender = sbClient.createSender(queueName);
 
   try {
     for (let index = 0; index < listOfScientists.length; index++) {
@@ -66,10 +65,10 @@ async function main() {
       };
 
       console.log(`Sending message: ${message.body} - ${message.label}`);
-      await sender.send(message);
+      await sender.sendMessages(message);
     }
 
-    await queueClient.close();
+    await sender.close();
   } finally {
     await sbClient.close();
   }

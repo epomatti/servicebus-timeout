@@ -14,10 +14,10 @@
   "author": "Evandro Pomatti",
   "license": "ISC",
   "dependencies": {
-    "@azure/service-bus": "latest",
+    "@azure/service-bus": "^7.0.0-preview.4",
     "dotenv": "latest"
   },
   "devDependencies": {
-    "cross-env": "^7.0.2"
+    "cross-env": "latest"
   }
 }

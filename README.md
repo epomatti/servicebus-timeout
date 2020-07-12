@@ -30,7 +30,7 @@ npm start
 # "npm run debug" for dumps
 ```
 
-Immediately disconnect from the internet. Wait at least 1:20 minutes.
+Now disconnect your computer from the internet and wait at least 1:20 minutes.
 
 Reconnect to the internet and add messages to confirm it continues to operate:
 
