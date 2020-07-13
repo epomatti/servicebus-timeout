@@ -1,4 +1,4 @@
-const { ServiceBusClient, ReceiveMode } = require("@azure/service-bus");
+const { ServiceBusClient } = require("@azure/service-bus");
 
 require("dotenv").config();
 
@@ -10,8 +10,9 @@ async function main() {
     try {
       this.sbClient = new ServiceBusClient(connectionString);
       this.queueReceiver = this.sbClient.createReceiver(queueName, "receiveAndDelete");
-      // Clients locks here and keep waiting for messages
-      console.log("Waiting for messages: " + new Date());
+      this.sbClient.
+        // Clients locks here and keep waiting for messages
+        console.log("Waiting for messages: " + new Date());
       const messages = await this.queueReceiver.receiveMessages(10);
       messages.forEach(({ body }) => console.log(body));
       await this.queueReceiver.close();
