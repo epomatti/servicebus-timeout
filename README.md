@@ -11,7 +11,7 @@ az servicebus namespace create -n '<namespace>' -g '<group>' -l '<location>' --s
 az servicebus queue create -n '<name>' --namespace-name '<namespace>' -g '<group>'
 
 az servicebus namespace authorization-rule keys list \
-    -n RootManageSharedAccessKey -g <group> --namespace-name <namespace> \
+    -n RootManageSharedAccessKey -g '<group>' --namespace-name '<namespace>' \
     --query primaryConnectionString -o tsv
 ```
 
