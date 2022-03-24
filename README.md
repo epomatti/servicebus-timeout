@@ -2,7 +2,7 @@
 
 Sample code created to demonstrate my issue [#7689](https://github.com/Azure/azure-sdk-for-js/issues/7689) with Service Bus Node.js SDK for a bug that locked the receiver when the internet was unavailable for long periods of time.
 
-This bug has been fixed by Microsoft.
+This bug has since been fixed by Microsoft 👍
 
 ### Infrasctructure
 
