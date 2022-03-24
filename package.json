@@ -7,7 +7,8 @@
   },
   "main": "src/dequeue.js",
   "scripts": {
-    "start": "node src/dequeue.js",
+    "enqueue": "node src/enqueue.js",
+    "dequeue": "node src/dequeue.js",
     "debug": "cross-env NODE_ENV=dev DEBUG=rhea:events,*error,azure:service-bus:receiverbatching node src/dequeue.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
